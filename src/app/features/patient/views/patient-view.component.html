@@ -1,5 +1,50 @@
-<mat-toolbar color="primary">
-    <span>My Angular Material App</span>
-</mat-toolbar>
+<div class="main-content">
+    <mat-toolbar class="main-content__toolbar" color="primary">
+        <span>Example Angular Architecture Guide</span>
+    </mat-toolbar>
 
-<button mat-raised-button color="accent">Kliknij mnie</button>
+    <app-ui-patient-header></app-ui-patient-header>
+
+    <button
+        *ngIf="!arePatientsVisible && arePatientsLoaded && !isPatientFormVisible"
+        class="main-content__button"
+        color="accent"
+        mat-raised-button
+        (click)="onShowPatients()"
+    >
+        Show test patient list
+    </button>
+    <button
+        *ngIf="!isPatientFormVisible && arePatientsLoaded && !arePatientsVisible"
+        class="main-content__button"
+        color="accent"
+        mat-raised-button
+        (click)="onShowPatientForm()"
+    >
+        Show test patient form
+    </button>
+
+    <div *ngIf="isPatientFormVisible" class="main-content__patient-form">
+        <app-patient-form></app-patient-form>
+    </div>
+
+    <div *ngIf="arePatientsVisible" class="main-content__patient-list">
+        <mat-selection-list [multiple]="false">
+            <div class="main-content__patient-list__patient" *ngFor="let patient of patients">
+                <mat-list-option (click)="onPatientSelected(patient)">
+                    {{ patient.firstName }} {{ patient.lastName }}
+                </mat-list-option>
+            </div>
+        </mat-selection-list>
+
+        <button color="accent" mat-raised-button (click)="onShowHealthyPatients()">
+            Show only healthy patients
+        </button>
+    </div>
+
+    <div *ngIf="selectedPatient" class="main-content__patient-details">
+        <app-patient-details [selectedPatient]="selectedPatient"></app-patient-details>
+    </div>
+
+    <app-ui-patient-footer></app-ui-patient-footer>
+</div>

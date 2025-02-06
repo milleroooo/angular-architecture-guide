@@ -1,1 +1,18 @@
-<p>patient-details works!</p>
+<mat-card class="patient-details" appearance="outlined">
+    <mat-card-header class="patient-details__header">
+        <div mat-card-avatar class="patient-details__header__image"></div>
+        <mat-card-title>
+            {{ selectedPatient.firstName }} {{ selectedPatient.lastName }}
+        </mat-card-title>
+        <mat-card-subtitle>#{{ selectedPatient.id }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="patient-details__content">
+        <strong>Age: {{ selectedPatient.age }}</strong>
+        <strong>Phone number: {{ selectedPatient.phoneNumber }}</strong>
+        <strong>Email: {{ selectedPatient.email }}</strong>
+        <strong>City: {{ selectedPatient.city }}</strong>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button (click)="onOpenPatientSettings()">SETTINGS</button>
+    </mat-card-actions>
+</mat-card>

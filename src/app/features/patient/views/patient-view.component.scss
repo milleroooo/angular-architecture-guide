@@ -1,0 +1,13 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    height: 100%;
+    background-color: #252424;
+}
+
+app-ui-patient-footer,
+app-ui-patient-header {
+    width: 70%;
+}

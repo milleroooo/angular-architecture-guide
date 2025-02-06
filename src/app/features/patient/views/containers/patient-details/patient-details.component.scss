@@ -1,0 +1,15 @@
+.patient-details {
+    width: 400px;
+
+    &__header {
+        &__image {
+            background-image: url('https://cdn-icons-png.flaticon.com/512/4228/4228704.png');
+            background-size: cover;
+        }
+    }
+
+    &__content {
+       display: flex;
+       flex-direction: column;
+    }
+}

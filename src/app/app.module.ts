@@ -1,23 +1,15 @@
+/**ANGULAR*/
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
+/**INTERNALS*/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UiPatientHeaderComponent } from './features/patient/views/ui/ui-patient-header/ui-patient-header.component';
-import { UiPatientFooterComponent } from './features/patient/views/ui/ui-patient-footer/ui-patient-footer.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        UiPatientHeaderComponent,
-        UiPatientFooterComponent,
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-    ],
+    declarations: [AppComponent],
+    imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
     providers: [],
     bootstrap: [AppComponent],
 })

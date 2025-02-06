@@ -1,6 +1,8 @@
+/**ANGULAR*/
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+/**MATERIAL*/
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,43 +17,46 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatListModule } from '@angular/material/list';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatInputModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    MatTableModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,
-    MatSlideToggleModule,
-    MatPaginatorModule,
-    MatAutocompleteModule,
-  ],
-  exports: [
-    MatButtonModule,
-    MatInputModule,
-    MatIconModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatSelectModule,
-    MatCheckboxModule,
-    MatFormFieldModule,
-    MatDialogModule,
-    MatTableModule,
-    MatSnackBarModule,
-    MatProgressSpinnerModule,
-    MatSlideToggleModule,
-    MatPaginatorModule,
-    MatAutocompleteModule,
-  ],
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatInputModule,
+        MatIconModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatTableModule,
+        MatSnackBarModule,
+        MatProgressSpinnerModule,
+        MatSlideToggleModule,
+        MatListModule,
+        MatPaginatorModule,
+        MatAutocompleteModule,
+    ],
+    exports: [
+        MatButtonModule,
+        MatInputModule,
+        MatIconModule,
+        MatCardModule,
+        MatListModule,
+        MatToolbarModule,
+        MatSelectModule,
+        MatCheckboxModule,
+        MatFormFieldModule,
+        MatDialogModule,
+        MatTableModule,
+        MatSnackBarModule,
+        MatProgressSpinnerModule,
+        MatSlideToggleModule,
+        MatPaginatorModule,
+        MatAutocompleteModule,
+    ],
 })
 export class MaterialModule {}
